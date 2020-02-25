@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="custom-shape text-right">
-                            <img src="{{asset('imgs/Webp.net-resizeimage.jpg')}}" alt="doctor patient">
+                            <img src="{{asset('imgs/certified-doctors.jpg')}}" alt="doctors image">
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="custom-shape text-right">
-                            <img src="{{asset('imgs/health-blog.jpg')}}" alt="doctor patient">
+                            <img src="{{asset('imgs/health-blog.jpg')}}" alt="health blog image">
                         </div>
                     </div>
                 </div>
