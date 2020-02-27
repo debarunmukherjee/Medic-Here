@@ -1,0 +1,34 @@
+header{
+    background-image: url('../../imgs/healthbg.jpg');
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.posts{
+    margin-top: 35px;
+    margin-bottom: 28%;
+}
+
+.post-item{
+    padding:15px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.read-more{
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.read-more:link, .read-more:visited{
+    color: rgb(21, 95, 255);
+}
+
+.read-more:hover, .read-more:active{
+    background: linear-gradient(to right, rgb(6, 143, 255) 0%, rgb(17, 100, 255) 100%);
+    color: #fff;
+}

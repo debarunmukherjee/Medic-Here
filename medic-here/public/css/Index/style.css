@@ -1,3 +1,6 @@
+header{
+  margin-top: 70px;
+}
 .custom-shape{
     display: inline-block;
     padding-bottom: 40px;
@@ -115,6 +118,10 @@ blockquote p {
     display: inline;
 }
 
+.contact-us{
+  margin-bottom: 25%;
+}
+
 input {
 	outline: none;
 	border: none;
@@ -149,7 +156,6 @@ textarea:-moz-placeholder { color: #999999; }
 textarea::-moz-placeholder { color: #999999; }
 textarea:-ms-input-placeholder { color: #999999; }
 
-/*---------------------------------------------*/
 button {
 	outline: none !important;
 	border: none;
@@ -164,12 +170,6 @@ iframe {
 	border: none !important;
 }
 
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Contact 2 ]*/
 .bg-contact2 {
   width: 100%;  
   background-repeat: no-repeat;
@@ -436,86 +436,3 @@ textarea.input2 + .focus-input2::after {
     opacity: 1;
   }
 }
-
-footer{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: rgb(66, 20, 20);
-  color: rgb(179, 179, 179);
-}
-
-a:link, a:visited, a:hover, a:active{
-  text-decoration: none;
-}
-
-
-footer ul{
-  list-style: none;
-  display: inline-block;
-}
-
-footer li{
-  display: inline-block;
-  margin: 0 10px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  text-align: center;
-  padding: 10px;
-  font-size: 22px;
-}
-
-.facebook, .youtube, .instagram, .twitter{
-  background-color: #fff;
-  transition: all 0.2s;
-}
-
-.facebook:hover{
-  background-color: #3b5998;
-  color: #fff;
-}
-
-.facebook a:link, .facebook a:visited{
-  color: #3b5998;
-  transition: all 0.2s;
-}
-
-.facebook:hover a, .youtube:hover a, .instagram:hover a, .twitter:hover a{
-  color: #fff !important;
-}
-
-.youtube:hover{
-  background-color: #c4302b;
-}
-
-.youtube a:link, .youtube a:visited{
-  color: #c4302b;
-  transition: all 0.2s;
-}
-
-.instagram:hover{
-  background-color: #3f729b;
-}
-
-.instagram a:link, .instagram a:visited{
-  color: #3f729b;
-  transition: all 0.2s;
-}
-
-.twitter:hover{
-  background-color: #00acee ;
-}
-
-.twitter a:link, .twitter a:visited{
-  color: #00acee ;
-  transition: all 0.2s;
-}
-
-.youtube, .instagram{
-  padding-top: 9px;
-}
-
-#map {
-  height: 200px;
-  width: 100%;
- }

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('custom-styles')
+    <link rel="stylesheet" href="{{asset('css/Index/style.css')}}">
+@endsection
+
 @section('content')
 <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -237,58 +241,7 @@
 	</div>
 </section>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-4">
-                        Our office address:<br>
-                        16 Main street,<br>
-                        Australia.
-                    </div>
-                    <div class="col-md-8">
-                        <div id="map"></div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="text-right col-md-6">
-                <ul>
-                    <li class="facebook">
-                        <a href="#">
-                            <div class="icon-container">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="youtube">
-                        <a href="#">
-                            <div class="icon-container">
-                                <i class="fab fa-youtube"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="instagram">
-                        <a href="#">
-                            <div class="icon-container">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="twitter">
-                        <a href="#">
-                            <div class="icon-container">
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container text-center mt-5">Crafted with <span style="color:red"><i class="fas fa-heart"></i> </span>by Debarun Mukherjee</div>
-</footer>
+
 @endsection
 
 @section('page-scripts')
@@ -359,22 +312,5 @@
                 $(thisAlert).removeClass('alert-validate');
             }
         })(jQuery);
-    </script>
-
-    {{-- maps script --}}
-    <script>
-        // Initialize and add the map
-        function initMap() {
-          // The location of Uluru
-          var uluru = {lat: -25.344, lng: 131.036};
-          // The map, centered at Uluru
-          var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 4, center: uluru});
-          // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwj__zGoFf0IolXfgieU4X-j_dVu_fx4E&callback=initMap">
     </script>
 @endsection
