@@ -152,31 +152,229 @@
         <div class="review-item">
             <div class="container">
                 <div class="row text-center">
-                    <div class="thumbnail"><div class="overlay">Tracy Smith</div></div>
+                    <div class="thumbnail" style="background-image: url('../../imgs/p1.jpg')"><div class="overlay">Tracy Smith</div></div>
                 </div>
             </div>
             <div class="container mt-4 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam amet officiis voluptas eius nisi eveniet, blanditiis saepe nesciunt voluptate dolor sed repellat.
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="review-item">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="thumbnail" style="background-image: url('../../imgs/p4.jpg')"><div class="overlay">Eric Gonzales</div></div>
+                </div>
+            </div>
+            <div class="container mt-4 text-center">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="review-item">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="thumbnail" style="background-image: url('../../imgs/p2.jpg')"><div class="overlay">Rick Lowe</div></div>
+                </div>
+            </div>
+            <div class="container mt-4 text-center">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, rem! Lorem ipsum dolor</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="review-item">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="thumbnail" style="background-image: url('../../imgs/p3.jpg')"><div class="overlay">Judy Lawrence</div></div>
+                </div>
+            </div>
+            <div class="container mt-4 text-center">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Sit amet consectetur adipisicing elit. Unde vitae officiis quam illo consectetur omnis neque</p>
+                </blockquote>
             </div>
         </div>
     </div>
 </section>
+
+<section class="contact-us">
+    <div class="bg-contact2">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form">
+					<span class="contact2-form-title">
+						Contact Us
+					</span>
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="NAME"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input2" type="text" name="email">
+						<span class="focus-input2" data-placeholder="EMAIL"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<textarea class="input2" name="message"></textarea>
+						<span class="focus-input2" data-placeholder="MESSAGE"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn">
+								Send Your Message
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        Our office address:<br>
+                        16 Main street,<br>
+                        Australia.
+                    </div>
+                    <div class="col-md-8">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="text-right col-md-6">
+                <ul>
+                    <li class="facebook">
+                        <a href="#">
+                            <div class="icon-container">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="youtube">
+                        <a href="#">
+                            <div class="icon-container">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="#">
+                            <div class="icon-container">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="twitter">
+                        <a href="#">
+                            <div class="icon-container">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mt-5">Crafted with <span style="color:red"><i class="fas fa-heart"></i> </span>by Debarun Mukherjee</div>
+</footer>
 @endsection
 
 @section('page-scripts')
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel(/*{
-                center: true,
-                items:2,
-                loop:true,
+            $(".owl-carousel").owlCarousel({
+                stagePadding: 50,
                 margin:10,
-                responsive:{
-                    600:{
-                        items:4
-                    }
-                }
-            }*/);
+            });
         });
+    </script>
+
+    {{-- contact form scripts --}}
+    <script>
+        (function ($) {
+            "use strict";
+            $('.input2').each(function(){
+                $(this).on('blur', function(){
+                    if($(this).val().trim() != "") {
+                        $(this).addClass('has-val');
+                    }
+                    else {
+                        $(this).removeClass('has-val');
+                    }
+                })    
+            })
+            var name = $('.validate-input input[name="name"]');
+            var email = $('.validate-input input[name="email"]');
+            var message = $('.validate-input textarea[name="message"]');
+
+
+            $('.validate-form').on('submit',function(){
+                var check = true;
+
+                if($(name).val().trim() == ''){
+                    showValidate(name);
+                    check=false;
+                }
+
+
+                if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                    showValidate(email);
+                    check=false;
+                }
+
+                if($(message).val().trim() == ''){
+                    showValidate(message);
+                    check=false;
+                }
+
+                return check;
+            });
+
+
+            $('.validate-form .input2').each(function(){
+                $(this).focus(function(){
+                hideValidate(this);
+            });
+            });
+            function showValidate(input) {
+                var thisAlert = $(input).parent();
+
+                $(thisAlert).addClass('alert-validate');
+            }
+            function hideValidate(input) {
+                var thisAlert = $(input).parent();
+
+                $(thisAlert).removeClass('alert-validate');
+            }
+        })(jQuery);
+    </script>
+
+    {{-- maps script --}}
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: -25.344, lng: 131.036};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 4, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwj__zGoFf0IolXfgieU4X-j_dVu_fx4E&callback=initMap">
     </script>
 @endsection
