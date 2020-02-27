@@ -145,6 +145,38 @@
 </section>
 
 <section class="testimonials">
-
+    <div class="container text-center section-title mt-5 mb-5">
+        What our patients think?
+    </div>
+    <div class="owl-carousel">
+        <div class="review-item">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="thumbnail"><div class="overlay">Tracy Smith</div></div>
+                </div>
+            </div>
+            <div class="container mt-4 text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam amet officiis voluptas eius nisi eveniet, blanditiis saepe nesciunt voluptate dolor sed repellat.
+            </div>
+        </div>
+    </div>
 </section>
+@endsection
+
+@section('page-scripts')
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel(/*{
+                center: true,
+                items:2,
+                loop:true,
+                margin:10,
+                responsive:{
+                    600:{
+                        items:4
+                    }
+                }
+            }*/);
+        });
+    </script>
 @endsection
