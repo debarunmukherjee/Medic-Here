@@ -75,13 +75,76 @@
     </div>
 </header>
 
-<section class="features">
+<section class="about-us">
+    <div class="container text-center section-title mt-5 mb-5">
+        Who are we?
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-3"></div>
+            <div class="col-md-4 text-center">
+                <img src="{{asset('imgs/name-logo.svg')}}" alt="Company logo with name" class="about-us-img mx-auto">
+            </div>
+            <div class="col-md-8 about-us-text">
+                <p>
+                    <span class="highlight-text-start">Mediic Here</span> lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur totam, voluptas, quae illum ipsa fugiat odio expedita quas omnis atque amet voluptatum quasi rem distinctio aliquam, veritatis debitis ut sequi.
+                </p>
+
+                <p class="mt-3">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde consectetur vel ullam explicabo? Voluptas, nam nobis repellat id similique saepe repudiandae doloremque rem dolor aliquid facere, distinctio est sapiente laboriosam.
+                </p>
+                
+            </div>
         </div>
     </div>
+</section>
+
+<section class="features">
+    <div class="container text-center section-title mt-5 mb-5">
+        What sets us apart?
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container">
+                    <div class="row text-center">
+                        <img src="{{asset('imgs/trust.svg')}}" alt="Trust image" class="feature-icon mx-auto">
+                    </div>
+                    <div class="row mt-3">
+                        <p>
+                            <span class="highlight-text-start">Trust</span> is always at the heart of all the services by medic here. If there is anything that you feel went wrong on our side please don't hesitate to bring it to our attention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container">
+                    <div class="row text-center">
+                        <img src="{{asset('imgs/affordable.svg')}}" alt="Trust image" class="feature-icon mx-auto">
+                    </div>
+                    <div class="row mt-3">
+                        <p>
+                            <span class="highlight-text-start">Affordability</span> is one of the primary goals of medic here. We try our best to bring the best of our services to you with minimal cost.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container">
+                    <div class="row text-center">
+                        <img src="{{asset('imgs/available.svg')}}" alt="Trust image" class="feature-icon mx-auto">
+                    </div>
+                    <div class="row mt-3">
+                        <p>
+                            <span class="highlight-text-start">Availability</span> of all our services is one of the key features that sets us apat from other clinic services. Doctors are available 24 hours every day of the week.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+
 </section>
 @endsection

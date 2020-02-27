@@ -4,9 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        {{-- Fonts --}}
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500|Rajdhani:600&display=swap" rel="stylesheet">
+
+        {{-- Styles --}}
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/navbar/style.css')}}">
-        <link rel="stylesheet" href="{{asset('css/hero_section/style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Index/style.css')}}">
 
         <title>{{config('app.name', 'Medic Here')}}</title>
 
