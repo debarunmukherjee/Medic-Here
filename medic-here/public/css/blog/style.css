@@ -15,6 +15,11 @@ header{
     border: 1px solid rgb(218, 218, 218);
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.post-item:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .read-more{
@@ -22,6 +27,7 @@ header{
     padding: 3px 7px;
     border-radius: 5px;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 .read-more:link, .read-more:visited{

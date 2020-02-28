@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderby('created_at', 'desc')->paginate(6);
         return view('pages.blog')->with('posts', $posts);
     }
 
@@ -25,7 +25,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create_post');
     }
 
     /**
@@ -36,7 +36,17 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            "title" => "required",
+            "body" => "required"
+        ]);
+
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+        
+        return redirect('/posts')->with('success', 'Post successfully created.');
     }
 
     /**
@@ -47,7 +57,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('pages.full_post')->with('post', $post);
     }
 
     /**

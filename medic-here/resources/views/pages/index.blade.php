@@ -230,11 +230,16 @@
 					<div class="container-contact2-form-btn">
 						<div class="wrap-contact2-form-btn">
 							<div class="contact2-form-bgbtn"></div>
-							<button class="contact2-form-btn">
+							<button class="contact2-form-btn" id="contact-submit-btn">
 								Send Your Message
 							</button>
 						</div>
-					</div>
+                    </div>
+                    <div class="container mt-3" id="contact-success-alert">
+                        <div class="alert alert-success" role="alert">
+                            <strong>Message Received! </strong>Sit tight till we get back to you.
+                        </div>
+                    </div>
 				</form>
 			</div>
 		</div>
@@ -251,66 +256,95 @@
                 stagePadding: 50,
                 margin:10,
             });
+            $('#contact-success-alert').hide();
         });
     </script>
 
     {{-- contact form scripts --}}
     <script>
-        (function ($) {
-            "use strict";
-            $('.input2').each(function(){
-                $(this).on('blur', function(){
-                    if($(this).val().trim() != "") {
-                        $(this).addClass('has-val');
+        $(document).ready(function(){
+            (function ($) {
+                "use strict";
+                $('.input2').each(function(){
+                    $(this).on('blur', function(){
+                        if($(this).val().trim() != "") {
+                            $(this).addClass('has-val');
+                        }
+                        else {
+                            $(this).removeClass('has-val');
+                        }
+                    })    
+                })
+                var name = $('.validate-input input[name="name"]');
+                var email = $('.validate-input input[name="email"]');
+                var message = $('.validate-input textarea[name="message"]');
+
+
+                $('.validate-form').on('submit',function(e){
+                    e.preventDefault();
+                    var check = true;
+
+                    if($(name).val().trim() == ''){
+                        showValidate(name);
+                        check=false;
                     }
-                    else {
-                        $(this).removeClass('has-val');
+
+
+                    if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                        showValidate(email);
+                        check=false;
                     }
-                })    
-            })
-            var name = $('.validate-input input[name="name"]');
-            var email = $('.validate-input input[name="email"]');
-            var message = $('.validate-input textarea[name="message"]');
+
+                    if($(message).val().trim() == ''){
+                        showValidate(message);
+                        check=false;
+                    }
+
+                    if(check)
+                    {
+                        $.ajax({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            url: '/contact',
+                            type: 'POST',
+                            data: {
+                                'name' : name.val(),
+                                'email' : email.val(),
+                                'message' : message.val()
+                            },
+                            dataType: 'JSON',
+                            success: function (data) { 
+                                if(data.status == 'success')
+                                {
+                                    $('.validate-form').trigger("reset");
+                                    $("#contact-success-alert").show().delay(1000).fadeOut();
+                                }
+                            }
+                        });
+                    }
+
+                    return check;
+                });
 
 
-            $('.validate-form').on('submit',function(){
-                var check = true;
+                $('.validate-form .input2').each(function(){
+                    $(this).focus(function(){
+                        hideValidate(this);
+                    });
+                });
+                function showValidate(input) {
+                    var thisAlert = $(input).parent();
 
-                if($(name).val().trim() == ''){
-                    showValidate(name);
-                    check=false;
+                    $(thisAlert).addClass('alert-validate');
                 }
+                function hideValidate(input) {
+                    var thisAlert = $(input).parent();
 
-
-                if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-                    showValidate(email);
-                    check=false;
+                    $(thisAlert).removeClass('alert-validate');
                 }
-
-                if($(message).val().trim() == ''){
-                    showValidate(message);
-                    check=false;
-                }
-
-                return check;
-            });
-
-
-            $('.validate-form .input2').each(function(){
-                $(this).focus(function(){
-                hideValidate(this);
-            });
-            });
-            function showValidate(input) {
-                var thisAlert = $(input).parent();
-
-                $(thisAlert).addClass('alert-validate');
-            }
-            function hideValidate(input) {
-                var thisAlert = $(input).parent();
-
-                $(thisAlert).removeClass('alert-validate');
-            }
-        })(jQuery);
+            })(jQuery);
+        });
+        
     </script>
 @endsection

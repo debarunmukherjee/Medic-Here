@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         {{-- Fonts --}}
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500|Rajdhani:600&display=swap" rel="stylesheet">
@@ -58,6 +59,7 @@
               </ul>
             </div>
           </nav>
+        
         @yield('content')
         <footer>
             <div class="container">
@@ -136,7 +138,9 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwj__zGoFf0IolXfgieU4X-j_dVu_fx4E&callback=initMap">
     </script>
-    
+    <script>
+        $(".alert").alert();
+    </script>
     @yield('page-scripts')
     </body>
 </html>
