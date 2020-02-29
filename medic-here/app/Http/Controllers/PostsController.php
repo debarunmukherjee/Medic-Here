@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Auth;
 
 class PostsController extends Controller
 {
@@ -14,7 +15,13 @@ class PostsController extends Controller
      */
     public function index()
     {
+        // $posts = Post::all();
         $posts = Post::orderby('created_at', 'desc')->paginate(6);
+        foreach($posts as $post)
+        {
+            $name = $post->user->name;
+            $post['author'] = $name;
+        }
         return view('pages.blog')->with('posts', $posts);
     }
 
@@ -25,7 +32,14 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('pages.create_post');
+        if(Auth::user())
+        {
+            return view('pages.create_post');
+        }
+        else
+        {
+            return redirect('/login');
+        }
     }
 
     /**
@@ -44,6 +58,7 @@ class PostsController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->user_id = Auth::id();
         $post->save();
         
         return redirect('/posts')->with('success', 'Post successfully created.');
@@ -58,6 +73,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        $post['author'] = $post->user->name;
         return view('pages.full_post')->with('post', $post);
     }
 

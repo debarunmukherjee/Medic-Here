@@ -14,7 +14,7 @@
         <hr>
         <div class="row mt-4">
             <div class="col-6"><span class="font-weight-bold">Created at: </span>{{$post->created_at}}</div>
-            <div class="col-6 text-right"><span class="font-weight-bold">Author: </span>Debarun Mukherjee</div>
+            <div class="col-6 text-right"><span class="font-weight-bold">Author: </span>{{$post->author}}</div>
         </div>
     </div>
 @endsection

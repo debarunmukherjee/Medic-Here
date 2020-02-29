@@ -27,7 +27,7 @@
                             <span class="font-weight-bold">Created At: </span>{{$post->created_at}}
                         </div>
                         <div class="col-sm-6 text-center">
-                            <span class="font-weight-bold">By: </span>Debarun Mukherjee
+                            <span class="font-weight-bold">By: </span>{{$post->author}}
                         </div>
                     </div>
                 </div>
