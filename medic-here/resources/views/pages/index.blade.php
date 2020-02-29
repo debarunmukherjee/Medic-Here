@@ -255,6 +255,14 @@
             $(".owl-carousel").owlCarousel({
                 stagePadding: 50,
                 margin:10,
+                items: 1,
+                responsiveClass:true,
+                responsive:{
+                    1030:{
+                        items:2,
+                        nav:true
+                    }
+                }
             });
             $('#contact-success-alert').hide();
         });

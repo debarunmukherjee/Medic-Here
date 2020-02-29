@@ -2,3 +2,60 @@
     margin-top: 10%;
     margin-bottom: 27%;
 }
+
+.star-rating {
+    line-height:32px;
+    font-size:1.25em;
+}
+  
+.star-rating .fas{color: rgb(255, 145, 0);}
+
+@media (max-width: 1152px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:36%;
+    }
+}
+@media (max-width: 848px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:50%;
+    }
+}
+@media (max-width: 848px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:50%;
+    }
+}
+@media (max-width: 767px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:72%;
+    }
+}
+@media (max-width: 767px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:95%;
+    }
+}
+@media (max-width: 465px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:120%;
+    }
+}
+@media (max-width: 365px)
+{
+    .post-container{
+        margin-top: 18%;
+        margin-bottom:145%;
+    }
+}

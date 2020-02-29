@@ -38,3 +38,46 @@ header{
     background: linear-gradient(to right, rgb(6, 143, 255) 0%, rgb(17, 100, 255) 100%);
     color: #fff;
 }
+  
+.post-item .fas{
+    color: rgb(255, 145, 0);
+    line-height:32px;
+    font-size:1.70rem;
+}
+
+@media (max-width: 1122px)
+{
+    .posts{
+        margin-bottom: 40%;
+    }
+}
+@media (max-width: 805px)
+{
+    .posts{
+        margin-bottom: 55%;
+    }
+}
+@media (max-width: 767px)
+{
+    .posts{
+        margin-bottom: 70%;
+    }
+}
+@media (max-width: 623px)
+{
+    .posts{
+        margin-bottom: 85%;
+    }
+}
+@media (max-width: 523px)
+{
+    .posts{
+        margin-bottom: 113%;
+    }
+}
+@media (max-width: 387px)
+{
+    .posts{
+        margin-bottom: 140%;
+    }
+}

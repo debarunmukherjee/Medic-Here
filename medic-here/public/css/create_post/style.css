@@ -2,3 +2,53 @@
     margin-top: 10%;
     margin-bottom: 27%;
 }
+
+@media (max-width: 1152px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:36%;
+    }
+}
+@media (max-width: 848px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:50%;
+    }
+}
+@media (max-width: 848px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:50%;
+    }
+}
+@media (max-width: 767px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:72%;
+    }
+}
+@media (max-width: 767px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:95%;
+    }
+}
+@media (max-width: 465px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:120%;
+    }
+}
+@media (max-width: 365px)
+{
+    .create-post{
+        margin-top: 18%;
+        margin-bottom:145%;
+    }
+}

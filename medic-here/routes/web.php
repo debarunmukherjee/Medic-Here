@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@index');
+
 Route::resource('posts', 'PostsController');
 
 Route::post('/contact', 'ContactsController@index');
@@ -19,3 +20,9 @@ Route::post('/contact', 'ContactsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/rate', 'RatingsController@index');
+
+Route::get('/admin', 'AdminDetailsController@index');
+
+Route::get('/pdf', 'AdminDetailsController@pdf');

@@ -178,8 +178,9 @@ iframe {
 }
 
 .container-contact2 {
-  width: 100%;  
-  min-height: 100vh;
+  width: 100%;
+  margin-bottom: 27%;
+  /* min-height: 90vh; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -188,7 +189,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 3%;
   background: -webkit-linear-gradient(45deg, rgba(0, 85, 213, 0.8), rgba(122, 195, 255, 0.8));
 }
 
@@ -435,4 +436,123 @@ textarea.input2 + .focus-input2::after {
     visibility: visible;
     opacity: 1;
   }
+}
+
+@media (max-width: 2255px){
+  .container-contact2{
+    margin-bottom: -5%;
+  }
+}
+@media (max-width: 1862px){
+  .container-contact2{
+    margin-bottom: -3%;
+  }
+}
+@media (max-width: 1862px){
+  .container-contact2{
+    margin-bottom: -1%;
+  }
+}
+@media (max-width: 1466px){
+  .container-contact2{
+    margin-bottom: 20%;
+  }
+}
+@media (max-width: 1322px){
+  .container-contact2{
+    margin-bottom: 22%;
+  }
+}
+@media (max-width: 1210px){
+  .container-contact2{
+    margin-bottom: 29%;
+    min-height: 65vh;
+  }
+}
+@media (max-width: 910px){
+  .hero-text h1 {
+      font-size: 3.8rem;
+  }
+}
+@media (max-width: 804px){
+  .container-contact2 {
+    margin-bottom: 46%;
+    min-height: 100vh;
+}
+.navbar-nav{
+  font-size: 14px;
+}
+}
+@media (max-width: 767px){
+  .container-contact2 {
+    margin-bottom: 56%;
+    min-height: 100vh;
+}
+header {
+  margin-top: -19%;
+}
+
+.custom-shape img{
+  border-radius: 0;
+}
+footer ul {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+}
+
+@media (max-width: 725px)
+{
+  .container-contact2 {
+    margin-bottom: 60%;
+    min-height: 110vh;
+}
+}
+@media (max-width: 621px)
+{
+  .container-contact2 {
+    margin-bottom: 69%;
+    min-height: 110vh;
+}
+}
+@media (max-width: 580px)
+{
+  .wrap-contact2 {
+    padding: 15px 15px 20px 15px;
+}
+.container-contact2 {
+  margin-bottom: 75%;
+  min-height: 110vh;
+}
+.hero-text h1{
+  font-size: 2.8rem;
+}
+.hero-subtitle-container {
+  padding-left: 20%;
+  font-size: 16px;
+}
+header {
+  margin-top: -8%;
+}
+}
+
+@media (max-width: 457px)
+{
+  .container-contact2 {
+    margin-bottom: 95%;
+    min-height: 110vh;
+}
+.wrap-contact2 {
+  width: 90%;
+}
+}
+
+@media (max-width: 360px)
+{
+.container-contact2 {
+    margin-bottom: 137%;
+    min-height: 110vh;
+}
 }

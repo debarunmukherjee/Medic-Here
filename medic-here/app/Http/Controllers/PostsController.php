@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Rating;
 use Auth;
 
 class PostsController extends Controller
@@ -13,15 +14,21 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // $posts = Post::all();
-        $posts = Post::orderby('created_at', 'desc')->paginate(6);
+        $posts = [];
+        if ($request->input('sortBy') == 'rating') {
+            $posts = Post::orderby('avg_rating', 'desc')->paginate(6);
+        }
+        else
+            $posts = Post::orderby('created_at', 'desc')->paginate(6);
+
         foreach($posts as $post)
         {
             $name = $post->user->name;
             $post['author'] = $name;
         }
+
         return view('pages.blog')->with('posts', $posts);
     }
 
@@ -74,6 +81,26 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $post['author'] = $post->user->name;
+        
+        $rating = 0;
+
+        if(Auth::user())
+        {
+            $ratings = Rating::select('value')->where([
+                ['user_id', '=', Auth::id()],
+                ['post_id', '=', $post->id]
+            ])->get();
+            
+            $count = count($ratings);
+
+            if($count > 0)
+            {
+                $rating = $ratings[0]->value;
+            }
+        }
+
+        $post['rating'] = $rating;
+
         return view('pages.full_post')->with('post', $post);
     }
 

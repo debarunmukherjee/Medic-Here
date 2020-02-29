@@ -1,53 +1,53 @@
-.auth-container{
+.contacts-table{
     margin-top: 10%;
     margin-bottom: 27%;
 }
 
 @media (max-width: 1152px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:36%;
     }
 }
 @media (max-width: 848px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:50%;
     }
 }
 @media (max-width: 848px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:50%;
     }
 }
 @media (max-width: 767px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:72%;
     }
 }
 @media (max-width: 767px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:95%;
     }
 }
 @media (max-width: 465px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:120%;
     }
 }
 @media (max-width: 365px)
 {
-    .auth-container{
+    .contacts-table{
         margin-top: 18%;
         margin-bottom:145%;
     }

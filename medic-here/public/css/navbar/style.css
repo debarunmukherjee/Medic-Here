@@ -37,3 +37,9 @@
     margin: 0 auto;
     margin-top: 7%;
 }
+
+@media (max-width: 804px){
+  .navbar-nav{
+    font-size: 14px;
+  }
+  }

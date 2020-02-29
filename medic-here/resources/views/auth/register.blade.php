@@ -56,6 +56,15 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="container w-md-50 mb-4">
+                            <ul>
+                                <li><small>Should have At least one Uppercase letter.</small></li>
+                                <li><small>At least one Lower case letter.</small></li>
+                                <li><small>At least one numeric value.</small></li>
+                                <li><small>At least one special character.</small></li>
+                                <li><small>Must be more than 6 characters long.</small></li>
+                            </ul>
+                        </div>
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>

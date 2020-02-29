@@ -88,3 +88,24 @@ footer{
     height: 200px;
     width: 100%;
    }
+
+   @media (max-width: 804px){
+    footer li{
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 767px)
+  {
+    footer ul {
+      list-style: none;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+    footer li{
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }

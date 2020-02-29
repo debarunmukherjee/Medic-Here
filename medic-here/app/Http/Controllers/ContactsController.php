@@ -24,6 +24,6 @@ class ContactsController extends Controller
         $response = array(
             'status' => 'success'
         );
-        return response()->json($response); 
+        return response()->json($response);
     }
 }
