@@ -79,7 +79,7 @@
     </div>
 </header>
 
-<section class="about-us">
+<section class="about-us" id="about-us">
     <div class="container text-center section-title mt-5 mb-5">
         Who are we?
     </div>
@@ -102,7 +102,7 @@
     </div>
 </section>
 
-<section class="features">
+<section class="features" id="features">
     <div class="container text-center section-title mt-5 mb-5">
         What sets us apart?
     </div>
@@ -148,7 +148,7 @@
     </div>
 </section>
 
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
     <div class="container text-center section-title mt-5 mb-5">
         What our patients think?
     </div>
@@ -204,7 +204,7 @@
     </div>
 </section>
 
-<section class="contact-us">
+<section class="contact-us" id="contact-us">
     <div class="bg-contact2">
 		<div class="container-contact2">
 			<div class="wrap-contact2">

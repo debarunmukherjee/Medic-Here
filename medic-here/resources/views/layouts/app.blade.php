@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="{{asset('css/footer/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <style>
+        html {
+        scroll-behavior: smooth;
+    }
+    </style>
     @yield('custom-styles')
 
     <!-- Font awesome -->
@@ -49,16 +54,16 @@
                             <a class="nav-link" href="/posts">Health Blog</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="/#about-us">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="/#features">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonials</a>
+                            <a class="nav-link" href="/#testimonials">Testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="/#contact-us">Contact Us</a>
                         </li>
                         @if (Auth::user() && Auth::user()->role =='admin')
                             <li class="nav-item">
